@@ -76,3 +76,35 @@ plt.savefig(output_file, dpi=300, bbox_inches='tight')
 print(f"[✔] Figure saved at: {output_file}")
 
 plt.show()
+
+
+sns.lmplot(
+    data=df,
+    x='bat_efficiency',
+    y='bat_landing_to_food',
+    scatter_kws={'alpha':0.5},
+    line_kws={'color':'green', 'lw':2},
+    height=5
+)
+plt.title("Relationship between Bat Efficiency and Feeding Delay")
+plt.xlabel("Bat Efficiency")
+plt.ylabel("Bat Landing → Food Delay (sec)")
+save_path = repo_root / "Tikaram(Jivan)" / "figures"
+plt.savefig(save_path / "figure2_bat_efficiency.png", dpi=300, bbox_inches='tight')
+plt.show()
+
+
+sns.lmplot(
+    data=df,
+    x='risk_reward_interaction',
+    y='bat_landing_to_food',
+    scatter_kws={'alpha':0.5},
+    line_kws={'color':'purple', 'lw':2},
+    height=5
+)
+plt.title("Effect of Risk–Reward Interaction on Feeding Delay")
+plt.xlabel("Risk × Reward Interaction")
+plt.ylabel("Bat Landing → Food Delay (sec)")
+plt.savefig(save_path / "figure3_risk_reward.png", dpi=300, bbox_inches='tight')
+plt.show()
+
