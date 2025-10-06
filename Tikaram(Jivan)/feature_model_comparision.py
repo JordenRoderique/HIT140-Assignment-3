@@ -23,7 +23,7 @@ base = pd.read_csv(base_path)
 enh  = pd.read_csv(enh_path)
 print(f"[i] Loaded: {base_path.name}, {enh_path.name}")
 
-# 🧹 Clean up: remove rare season label (2)
+# Clean up: remove rare season label (2)
 base = base[base['season'] < 2]
 enh  = enh[enh['season'] < 2]
 

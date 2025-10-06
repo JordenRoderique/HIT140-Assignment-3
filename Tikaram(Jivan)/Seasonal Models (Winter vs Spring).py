@@ -7,14 +7,14 @@ import pandas as pd
 import statsmodels.api as sm
 from pathlib import Path
 
-# 🧭 Automatically find repo root (folder containing "datasets")
+# Automatically find repo root (folder containing "datasets")
 repo_root = Path(__file__).resolve().parents[1]
 data_path = repo_root / "datasets" / "cleaned" / "engineered_dataset1.csv"
 
 print(f"[i] Loading dataset from: {data_path}")
 enh = pd.read_csv(data_path)
 
-# 🧹 Clean and prepare
+# Clean and prepare
 enh['season'] = pd.to_numeric(enh['season'], errors='coerce')
 df = enh.copy()
 
@@ -49,7 +49,7 @@ coef_compare = pd.DataFrame({
     'Spring β': model_spring.params[X_cols].round(3)
 })
 
-print("\n🧮  Coefficient Comparison (Winter vs Spring):")
+print("\n  Coefficient Comparison (Winter vs Spring):")
 print(coef_compare.to_string(index=False))
 
 # --- Visual: Rat intensity vs Bat behaviour by season ---
