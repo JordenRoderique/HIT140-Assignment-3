@@ -57,7 +57,7 @@ labels = ["Early", "Mid", "Late"]
 df1["night_period"] = pd.cut(df1["hours_after_sunset"].astype(float), bins=bins, labels=labels, include_lowest=True)
 
 # 4) (Optional numeric coding for regression dummies later)
-#    We'll keep the categorical, but you can one-hot later during modeling.
+#    We'll keep the categorical, but we can one-hot later during modeling.
 
 # ---------- RAT-INTENSITY FEATURES FROM df2 ----------
 # 5) Rat intensity per period: how long rats are present per arrival
