@@ -1,0 +1,27 @@
+{
+  "Winter": {
+    "n": 151,
+    "Q1": 1.0,
+    "Q3": 6.0,
+    "IQR": 5.0,
+    "lower_fence": -6.5,
+    "upper_fence": 13.5,
+    "median": 2.0,
+    "mean": 6.03962255794702
+  },
+  "Spring": {
+    "n": 756,
+    "Q1": 1.0,
+    "Q3": 13.25,
+    "IQR": 12.25,
+    "lower_fence": -17.375,
+    "upper_fence": 31.625,
+    "median": 4.0,
+    "mean": 12.84633528840344
+  },
+  "effect_size_median_diff": {
+    "diff": 2.0,
+    "ci95_lo": 1.0,
+    "ci95_hi": 3.0
+  }
+}
