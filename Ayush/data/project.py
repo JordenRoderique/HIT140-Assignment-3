@@ -339,8 +339,7 @@ def models_optional(df1: pd.DataFrame):
     }
 
     # Linear (optional): landing delay ~ season + rat_minutes (merged proxy)
-    # NOTE: This merges df1 rows to the closest 30-min bucket from df2 if you extend it.
-    # For now, we show a simple season-only model (interpret with caution).
+    
     lm_df = df1.dropna(subset=["bat_landing_to_food","season"]).copy()
     lm_df["season"] = lm_df["season"].astype(int)
     m3 = smf.ols("bat_landing_to_food ~ C(season)", data=lm_df).fit()
